@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { Button } from "components/Button/Button"
+import { Navbar } from "components/Navbar/Navbar"
 import { LP_GRID_ITEMS } from "../lp-items"
 
 export default function Web() {
@@ -8,6 +9,7 @@ export default function Web() {
       <Head>
         <title>Next.js Enterprise Boilerplate</title>
       </Head>
+      <Navbar items={[{ label: "Test", href: "#" }]} />
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto grid max-w-screen-xl px-4 py-8 text-center lg:py-16">
           <div className="mx-auto place-self-center">
