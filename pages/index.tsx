@@ -10,7 +10,12 @@ export default function Web() {
       <Head>
         <title>Next.js Enterprise Boilerplate</title>
       </Head>
-      <Navbar items={[{ label: "Test", href: "#" }]} />
+      <Navbar
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Profiles", href: "/profiles" },
+        ]}
+      />
       <AboutUs />
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto grid max-w-screen-xl px-4 py-8 text-center lg:py-16">
