@@ -7,6 +7,7 @@ const pill = cva(
   {
     variants: {
       active: { true: [""], false: ["border-gray-500", "bg-gray-100", "text-gray-800"] },
+      clickable: { true: ["cursor-pointer"], false: ["cursor-default"] },
     },
     defaultVariants: {
       active: true,
@@ -18,9 +19,9 @@ export interface PillProps extends React.HTMLAttributes<HTMLAnchorElement>, Vari
   active: boolean
 }
 
-export function Pill({ className, active, ...props }: PillProps) {
+export function Pill({ className, active, onClick, ...props }: PillProps) {
   return (
-    <span className={twMerge(pill({ className, active }))} {...props}>
+    <span className={twMerge(pill({ className, active, clickable: Boolean(onClick) }))} onClick={onClick} {...props}>
       {props.children}
     </span>
   )

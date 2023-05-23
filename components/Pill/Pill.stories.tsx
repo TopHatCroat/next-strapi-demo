@@ -6,10 +6,14 @@ const meta: Meta<typeof Pill> = {
   component: Pill,
   args: {
     active: true,
+    clickable: true,
     children: "Pill",
   },
   argTypes: {
     active: {
+      control: { type: "boolean" },
+    },
+    clickable: {
       control: { type: "boolean" },
     },
     children: {
@@ -21,7 +25,7 @@ const meta: Meta<typeof Pill> = {
 type Story = StoryObj<typeof Pill>
 
 export const Default: Story = {
-  render: (args) => <Pill {...args} />,
+  render: (args) => <Pill onClick={args.clickable ? () => alert("clicekd") : undefined} {...args} />,
 }
 
 export default meta

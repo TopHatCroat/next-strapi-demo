@@ -10,7 +10,7 @@ const navbar = cva([], {
   variants: {},
 })
 
-export interface NavbarProps extends React.ButtonHTMLAttributes<HTMLAnchorElement>, VariantProps<typeof navbar> {
+export interface NavbarProps extends React.HTMLAttributes<HTMLAnchorElement>, VariantProps<typeof navbar> {
   items: NavbarItem[]
 }
 
