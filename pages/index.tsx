@@ -14,6 +14,7 @@ export default function Web() {
         items={[
           { label: "Home", href: "/" },
           { label: "Profiles", href: "/profiles" },
+          { label: "FAQ", href: "/faq" },
         ]}
       />
       <AboutUs />

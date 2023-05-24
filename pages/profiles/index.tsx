@@ -62,6 +62,7 @@ export default function Web() {
         items={[
           { label: "Home", href: "/" },
           { label: "Profiles", href: "/profiles" },
+          { label: "FAQ", href: "/faq" },
         ]}
       />
       <section className="mx-auto flex max-w-screen-md justify-center gap-4">
