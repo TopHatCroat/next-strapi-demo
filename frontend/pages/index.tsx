@@ -1,6 +1,6 @@
 import Head from "next/head"
-import { Button } from "components/Button/Button"
-import { Navbar } from "components/Navbar/Navbar"
+import { Button } from "frontend/components/Button/Button"
+import { Navbar } from "frontend/components/Navbar/Navbar"
 import { AboutUs } from "../components/AboutUs/AboutUs"
 import { LP_GRID_ITEMS } from "../lp-items"
 

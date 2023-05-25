@@ -265,7 +265,7 @@ Contributions are always welcome! To contribute, please follow these steps:
 
 ## 📜 License
 
-This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
+This project is licensed under the MIT License. For more information, see the [LICENSE](LICENSE) file.
 
 ## Contributors
 

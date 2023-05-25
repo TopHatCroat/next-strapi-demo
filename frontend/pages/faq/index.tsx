@@ -1,6 +1,6 @@
 import Head from "next/head"
-import { Navbar } from "components/Navbar/Navbar"
-import { Profile } from "components/Profile/Profile"
+import { Navbar } from "frontend/components/Navbar/Navbar"
+import { Profile } from "frontend/components/Profile/Profile"
 import { useState } from "react"
 import { Accordion } from "../../components/Accordion/Accordion"
 import { Pill } from "../../components/Pill/Pill"
