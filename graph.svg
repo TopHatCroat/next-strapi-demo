@@ -9,11 +9,11 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 208.6)">
 <title>G</title>
 <polygon fill="#111111" stroke="none" points="-21.6,21.6 -21.6,-208.6 655.6,-208.6 655.6,21.6 -21.6,21.6"/>
-<!-- components/Button/Button.stories.tsx -->
+<!-- components/Button/Profile.stories.tsx -->
 <g id="node1" class="node">
-<title>components/Button/Button.stories.tsx</title>
+<title>components/Button/Profile.stories.tsx</title>
 <path fill="none" stroke="#c6c5fe" d="M233.33,-64C233.33,-64 7.67,-64 7.67,-64 3.83,-64 0,-60.17 0,-56.33 0,-56.33 0,-48.67 0,-48.67 0,-44.83 3.83,-41 7.67,-41 7.67,-41 233.33,-41 233.33,-41 237.17,-41 241,-44.83 241,-48.67 241,-48.67 241,-56.33 241,-56.33 241,-60.17 237.17,-64 233.33,-64"/>
-<text text-anchor="middle" x="120.5" y="-48.8" font-family="Arial" font-size="14.00" fill="#c6c5fe">components/Button/Button.stories.tsx</text>
+<text text-anchor="middle" x="120.5" y="-48.8" font-family="Arial" font-size="14.00" fill="#c6c5fe">components/Button/Profile.stories.tsx</text>
 </g>
 <!-- components/Button/Button.tsx -->
 <g id="node2" class="node">
@@ -21,9 +21,9 @@
 <path fill="none" stroke="#cfffac" d="M466.33,-43C466.33,-43 284.67,-43 284.67,-43 280.83,-43 277,-39.17 277,-35.33 277,-35.33 277,-27.67 277,-27.67 277,-23.83 280.83,-20 284.67,-20 284.67,-20 466.33,-20 466.33,-20 470.17,-20 474,-23.83 474,-27.67 474,-27.67 474,-35.33 474,-35.33 474,-39.17 470.17,-43 466.33,-43"/>
 <text text-anchor="middle" x="375.5" y="-27.8" font-family="Arial" font-size="14.00" fill="#cfffac">components/Button/Button.tsx</text>
 </g>
-<!-- components/Button/Button.stories.tsx&#45;&gt;components/Button/Button.tsx -->
+<!-- components/Button/Profile.stories.tsx&#45;&gt;components/Button/Button.tsx -->
 <g id="edge1" class="edge">
-<title>components/Button/Button.stories.tsx&#45;&gt;components/Button/Button.tsx</title>
+<title>components/Button/Profile.stories.tsx&#45;&gt;components/Button/Button.tsx</title>
 <path fill="none" stroke="#757575" d="M241.33,-42.55C249.59,-41.87 257.89,-41.18 266.08,-40.5"/>
 <polygon fill="#757575" stroke="#757575" points="266.1,-43.93 275.78,-39.61 265.53,-36.95 266.1,-43.93"/>
 </g>

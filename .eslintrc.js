@@ -66,7 +66,7 @@ module.exports = {
 }
 
 function getDirectoriesToSort() {
-  const ignoredSortingDirectories = [".git", ".next", ".vscode", "node_modules"]
+  const ignoredSortingDirectories = [".git", ".vscode", ".idea", "node_modules"]
   return getDirectories(process.cwd()).filter((f) => !ignoredSortingDirectories.includes(f))
 }
 
