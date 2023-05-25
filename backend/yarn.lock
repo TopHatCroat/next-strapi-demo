@@ -1051,7 +1051,7 @@
     core-js-pure "^3.25.1"
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.13", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.13", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.15.4", "@babel/runtime@^7.18.3", "@babel/runtime@^7.18.6", "@babel/runtime@^7.20.13", "@babel/runtime@^7.21.0", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.2", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.21.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.5.tgz#8492dddda9644ae3bda3b45eabe87382caee7200"
   integrity sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==
@@ -1589,7 +1589,7 @@
   dependencies:
     tslib "^2.4.0"
 
-"@graphql-tools/utils@^8.12.0":
+"@graphql-tools/utils@^8.13.1":
   version "8.13.1"
   resolved "https://registry.yarnpkg.com/@graphql-tools/utils/-/utils-8.13.1.tgz#b247607e400365c2cd87ff54654d4ad25a7ac491"
   integrity sha512-qIh9yYpdUFmctVqovwMdheVNJqFh+DQNWIhX87FJStfXYnmweBUDATok9fWPleKeFwxnW8IapKmY8m8toJEkAw==
@@ -2335,6 +2335,24 @@
     compute-scroll-into-view "^3.0.3"
     prop-types "^15.8.1"
 
+"@strapi/design-system@1.7.7":
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/@strapi/design-system/-/design-system-1.7.7.tgz#7de809e4e9e964193e33c29fc01a2d81fbda3ae9"
+  integrity sha512-kN+hBXPvt6Bx0+jj4P95odrolY9VICxaZx0GdMSBc0MuIothhB5fKXr8q+aIIa9QcKmqSSc86w7XPg4XUVqmkw==
+  dependencies:
+    "@codemirror/lang-json" "^6.0.1"
+    "@floating-ui/react-dom" "^1.3.0"
+    "@internationalized/number" "^3.2.0"
+    "@radix-ui/react-dismissable-layer" "^1.0.3"
+    "@radix-ui/react-dropdown-menu" "^2.0.4"
+    "@radix-ui/react-focus-scope" "1.0.2"
+    "@strapi/ui-primitives" "^1.7.7"
+    "@uiw/react-codemirror" "^4.19.16"
+    aria-hidden "^1.2.3"
+    compute-scroll-into-view "^3.0.3"
+    prop-types "^15.8.1"
+    react-remove-scroll "^2.5.5"
+
 "@strapi/generate-new@4.10.5":
   version "4.10.5"
   resolved "https://registry.yarnpkg.com/@strapi/generate-new/-/generate-new-4.10.5.tgz#032f0bf8a52dacae9d7cf15877f3e4491cf660db"
@@ -2383,10 +2401,31 @@
     react-intl "6.4.1"
     react-select "5.7.0"
 
+"@strapi/helper-plugin@4.10.6":
+  version "4.10.6"
+  resolved "https://registry.yarnpkg.com/@strapi/helper-plugin/-/helper-plugin-4.10.6.tgz#f1307d9a0e9be15c743a3e97a21fb8ea62cb18c5"
+  integrity sha512-YPwsYKjA2VSOHN+lS913L3VjJWX7m3Yl3P4gTYlq+hbGvPl2Gk9N0cShTx8+x/t9Y1A7M/jWS8jnJBR+AQ7htw==
+  dependencies:
+    axios "1.3.4"
+    date-fns "2.30.0"
+    formik "^2.2.6"
+    immer "9.0.19"
+    lodash "4.17.21"
+    prop-types "^15.7.2"
+    qs "6.11.1"
+    react-helmet "^6.1.0"
+    react-intl "6.4.1"
+    react-select "5.7.0"
+
 "@strapi/icons@1.7.5":
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-1.7.5.tgz#e0914e2dbb5824b51dcea3718ea0f25fa941bd36"
   integrity sha512-wpR9OcT2YM6l1/hgBsjovXxr8vxRgZcRHdOMKEy7IAPIKO7BImlKsjW3KE/5I2G8shCXeixPPjdU+fWL4F694w==
+
+"@strapi/icons@1.7.7":
+  version "1.7.7"
+  resolved "https://registry.yarnpkg.com/@strapi/icons/-/icons-1.7.7.tgz#0256be564ca08b26ff12a3dade39d742de03e35c"
+  integrity sha512-ZMMbS6Kz6mtdfIEUz8VfWEEV1bw2IcAQvFDDxYRYdMr6zivmfRyRGKtIYBdhG2qMn3PhBD9VdVmCB9BIG0WEZw==
 
 "@strapi/logger@4.10.5":
   version "4.10.5"
@@ -2454,16 +2493,16 @@
     yup "^0.32.9"
 
 "@strapi/plugin-graphql@^4.0.0":
-  version "4.10.5"
-  resolved "https://registry.yarnpkg.com/@strapi/plugin-graphql/-/plugin-graphql-4.10.5.tgz#58316424af4b03f911c22122f94a62827b8ba562"
-  integrity sha512-2e9n3Ow3j7KoixoN+ZMJzHMcPc9wMZQ5eTkCdPkOCDS+ajAYySEOuWsu6itGFruH1IVR9widJ/05piBrn6M0Vw==
+  version "4.10.6"
+  resolved "https://registry.yarnpkg.com/@strapi/plugin-graphql/-/plugin-graphql-4.10.6.tgz#877501699d6a57fcabdaed0c54b84481822a168c"
+  integrity sha512-0URh5L4BHl4sxaondfRPpVimR3DfO8JLFZ0vLNE8NDv2HwBksI1U43oReP2RVvFTTWuCmLkTc0d9AV/7ixUS4A==
   dependencies:
     "@graphql-tools/schema" "8.5.1"
-    "@graphql-tools/utils" "^8.12.0"
-    "@strapi/design-system" "1.7.5"
-    "@strapi/helper-plugin" "4.10.5"
-    "@strapi/icons" "1.7.5"
-    "@strapi/utils" "4.10.5"
+    "@graphql-tools/utils" "^8.13.1"
+    "@strapi/design-system" "1.7.7"
+    "@strapi/helper-plugin" "4.10.6"
+    "@strapi/icons" "1.7.7"
+    "@strapi/utils" "4.10.6"
     apollo-server-core "3.11.1"
     apollo-server-koa "3.10.0"
     glob "^7.1.7"
@@ -2649,7 +2688,7 @@
     prettier "2.8.4"
     typescript "5.0.4"
 
-"@strapi/ui-primitives@^1.7.5":
+"@strapi/ui-primitives@^1.7.5", "@strapi/ui-primitives@^1.7.7":
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/@strapi/ui-primitives/-/ui-primitives-1.7.7.tgz#0fd7285093fa6fc82240446e9994eabd44ef8f41"
   integrity sha512-4FasM1P53SDOhN3MqMsKCSLv6NRUgKdk7rKyPr9+UUpMzOBE43xHB23LI/l3Cz23xfB+NeOR3i8CYW7egvjuSw==
@@ -2683,6 +2722,18 @@
   dependencies:
     "@sindresorhus/slugify" "1.1.0"
     date-fns "2.29.3"
+    http-errors "1.8.1"
+    lodash "4.17.21"
+    p-map "4.0.0"
+    yup "0.32.9"
+
+"@strapi/utils@4.10.6":
+  version "4.10.6"
+  resolved "https://registry.yarnpkg.com/@strapi/utils/-/utils-4.10.6.tgz#b32a2382fdcaaa04de0a681aeece8ad3bbd7ef2c"
+  integrity sha512-X9dNy31mhTvoeoLScGGw722N2r/bTaSp8wU8ryMvnooLYKcbw7GOcU6rSM7k5WNQToWziaditA2Vx34nZNdUsw==
+  dependencies:
+    "@sindresorhus/slugify" "1.1.0"
+    date-fns "2.30.0"
     http-errors "1.8.1"
     lodash "4.17.21"
     p-map "4.0.0"
@@ -3004,9 +3055,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@16 || 17 || 18":
-  version "18.2.6"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.6.tgz#5cd53ee0d30ffc193b159d3516c8c8ad2f19d571"
-  integrity sha512-wRZClXn//zxCFW+ye/D2qY65UsYP1Fpex2YXorHc8awoNamkMZSvBxwxdYVInsHOZZd2Ppq8isnSzJL5Mpf8OA==
+  version "18.2.7"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.7.tgz#dfb4518042a3117a045b8c222316f83414a783b3"
+  integrity sha512-ojrXpSH2XFCmHm7Jy3q44nXDyN54+EYKP2lBhJ2bqfyPj6cIUW/FZW/Csdia34NQgq7KYcAlHi5184m4X88+yw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -3290,7 +3341,7 @@ accepts@^1.3.5, accepts@^1.3.7, accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
-acorn-import-assertions@^1.7.6:
+acorn-import-assertions@^1.9.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/acorn-import-assertions/-/acorn-import-assertions-1.9.0.tgz#507276249d684797c84e0734ef84860334cfb1ac"
   integrity sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==
@@ -4699,6 +4750,13 @@ date-fns@2.29.3:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
   integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
+date-fns@2.30.0:
+  version "2.30.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.30.0.tgz#f367e644839ff57894ec6ac480de40cae4b0f4d0"
+  integrity sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==
+  dependencies:
+    "@babel/runtime" "^7.21.0"
+
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
@@ -5022,9 +5080,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.405"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.405.tgz#487bdba2d82a59b092d6b6e4602bf733cec6a7ef"
-  integrity sha512-JdDgnwU69FMZURoesf9gNOej2Cms1XJFfLk24y1IBtnAdhTcJY/mXnokmpmxHN59PcykBP4bgUU98vLY44Lhuw==
+  version "1.4.407"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.407.tgz#087e2ab97b3eb092aa6217c05986086b7dd370cc"
+  integrity sha512-5smEvFSFYMv90tICOzRVP7Opp98DAC4KW7RRipg3BuNpGbbV3N+x24Zh3sbLb1T5haGtOSy/hrBfXsWnIM9aCg==
 
 elliptic@^6.5.4:
   version "6.5.4"
@@ -5071,10 +5129,10 @@ end-of-stream@^1.1.0, end-of-stream@^1.4.1:
   dependencies:
     once "^1.4.0"
 
-enhanced-resolve@^5.14.0:
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.14.0.tgz#0b6c676c8a3266c99fa281e4433a706f5c0c61c4"
-  integrity sha512-+DCows0XNwLDcUhbFJPdlQEVnT2zXlCv7hPxemTz86/O+B/hCQ+mb7ydkPKiflpVraqLPCAfu7lDy+hBXueojw==
+enhanced-resolve@^5.14.1:
+  version "5.14.1"
+  resolved "https://registry.yarnpkg.com/enhanced-resolve/-/enhanced-resolve-5.14.1.tgz#de684b6803724477a4af5d74ccae5de52c25f6b3"
+  integrity sha512-Vklwq2vDKtl0y/vtwjSesgJ5MYS7Etuk5txS8VdKL4AOS1aUlD96zqIfsOSLQsdv3xgMRbtkWM8eG9XDfKUPow==
   dependencies:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
@@ -10340,9 +10398,9 @@ webpack-sources@^3.2.3:
   integrity sha512-/DyMEOrDgLKKIG0fmvtz+4dUX/3Ghozwgm6iPp8KRhvn+eQf9+Q7GWxVNMk3+uCPWfdXYC4ExGBckIXdFEfH1w==
 
 webpack@^5.82.0:
-  version "5.83.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.83.1.tgz#fcb69864a0669ac3539a471081952c45b15d1c40"
-  integrity sha512-TNsG9jDScbNuB+Lb/3+vYolPplCS3bbEaJf+Bj0Gw4DhP3ioAflBb1flcRt9zsWITyvOhM96wMQNRWlSX52DgA==
+  version "5.84.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-5.84.0.tgz#011115617668744aece87a9eb68534487d84de1a"
+  integrity sha512-XezNK3kwJq6IyeoZmZ1uEqQs+42nTqIi4jYM/YjLwaJedUC1N3bwnCC0+UcnHJPfqWX0kGrQnMIvZZyWYaIZrA==
   dependencies:
     "@types/eslint-scope" "^3.7.3"
     "@types/estree" "^1.0.0"
@@ -10350,10 +10408,10 @@ webpack@^5.82.0:
     "@webassemblyjs/wasm-edit" "^1.11.5"
     "@webassemblyjs/wasm-parser" "^1.11.5"
     acorn "^8.7.1"
-    acorn-import-assertions "^1.7.6"
+    acorn-import-assertions "^1.9.0"
     browserslist "^4.14.5"
     chrome-trace-event "^1.0.2"
-    enhanced-resolve "^5.14.0"
+    enhanced-resolve "^5.14.1"
     es-module-lexer "^1.2.1"
     eslint-scope "5.1.1"
     events "^3.2.0"
