@@ -1,16 +1,14 @@
 import Head from "next/head"
-import { Navbar } from "frontend/components/Navbar/Navbar"
-import { Profile } from "frontend/components/Profile/Profile"
-import { useState } from "react"
-import { Accordion } from "../../components/Accordion/Accordion"
-import { Pill } from "../../components/Pill/Pill"
+import { Accordion } from "components/Accordion/Accordion"
+import Layout from "components/Layout/Layout"
+import GlobalPageProps from "pages/GlobalPageProps"
 
 interface FaqDto {
   question: string
   answer: string
 }
 
-export default function Web() {
+export default function FaqPage({ pages }: GlobalPageProps) {
   const questions: FaqDto[] = [
     {
       question: "What is the difference between a junior and a senior developer?",
@@ -28,22 +26,17 @@ export default function Web() {
       <Head>
         <title>Profiles</title>
       </Head>
-      <Navbar
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Profiles", href: "/profiles" },
-          { label: "FAQ", href: "/faq" },
-        ]}
-      />
-      <section className="mx-auto flex max-w-screen-md justify-center gap-4">
-        <Accordion
-          className={"w-full"}
-          items={questions.map(({ question, answer }) => ({
-            title: question,
-            content: answer,
-          }))}
-        />
-      </section>
+      <Layout pages={pages}>
+        <section className="mx-auto flex max-w-screen-md justify-center gap-4">
+          <Accordion
+            className={"w-full"}
+            items={questions.map(({ question, answer }) => ({
+              title: question,
+              content: answer,
+            }))}
+          />
+        </section>
+      </Layout>
     </>
   )
 }

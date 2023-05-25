@@ -1,5 +1,5 @@
 import { cva } from "class-variance-authority"
-import { Button } from "frontend/components/Button/Button"
+import { Button } from "components/Button/Button"
 
 export interface ProfileProps {
   id: string

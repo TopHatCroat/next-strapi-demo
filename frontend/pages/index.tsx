@@ -1,22 +1,12 @@
-import Head from "next/head"
-import { Button } from "frontend/components/Button/Button"
-import { Navbar } from "frontend/components/Navbar/Navbar"
-import { AboutUs } from "../components/AboutUs/AboutUs"
-import { LP_GRID_ITEMS } from "../lp-items"
+import { LP_GRID_ITEMS } from "lp-items"
+import { AboutUs } from "components/AboutUs/AboutUs"
+import { Button } from "components/Button/Button"
+import Layout from "components/Layout/Layout"
+import GlobalPageProps from "pages/GlobalPageProps"
 
-export default function Web() {
+export default function Index({ pages }: GlobalPageProps) {
   return (
-    <>
-      <Head>
-        <title>Next.js Enterprise Boilerplate</title>
-      </Head>
-      <Navbar
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Profiles", href: "/profiles" },
-          { label: "FAQ", href: "/faq" },
-        ]}
-      />
+    <Layout pages={pages}>
       <AboutUs />
       <section className="bg-white dark:bg-gray-900">
         <div className="mx-auto grid max-w-screen-xl px-4 py-8 text-center lg:py-16">
@@ -56,6 +46,6 @@ export default function Web() {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }

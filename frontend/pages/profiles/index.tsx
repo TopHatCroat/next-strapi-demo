@@ -1,8 +1,8 @@
-import Head from "next/head"
-import { Navbar } from "frontend/components/Navbar/Navbar"
-import { Profile } from "frontend/components/Profile/Profile"
 import { useState } from "react"
-import { Pill } from "../../components/Pill/Pill"
+import Layout from "components/Layout/Layout"
+import { Pill } from "components/Pill/Pill"
+import { Profile } from "components/Profile/Profile"
+import GlobalPageProps from "pages/GlobalPageProps"
 
 interface ProfileDto {
   id: string
@@ -16,7 +16,7 @@ interface OptionDto {
   active: boolean
 }
 
-export default function Web() {
+export default function Profiles({ pages }: GlobalPageProps) {
   const [options, setOptions] = useState<OptionDto[]>([
     { name: "Junior", active: false },
     { name: "Senior", active: false },
@@ -54,17 +54,7 @@ export default function Web() {
   ]
 
   return (
-    <>
-      <Head>
-        <title>Profiles</title>
-      </Head>
-      <Navbar
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Profiles", href: "/profiles" },
-          { label: "FAQ", href: "/faq" },
-        ]}
-      />
+    <Layout pages={pages}>
       <section className="mx-auto flex max-w-screen-md justify-center gap-4">
         {options.map((option) => (
           <Pill key={option.name} onClick={() => onFilterClick(option)} active={option.active}>
@@ -80,6 +70,6 @@ export default function Web() {
           ))}
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
