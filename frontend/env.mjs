@@ -2,15 +2,15 @@ import { createEnv } from "@t3-oss/env-nextjs"
 import { z } from "zod"
 
 export const env = createEnv({
-  clientPrefix: "PUBLIC_",
   server: {
     ANALYZE: z
       .enum(["true", "false"])
       .optional()
       .transform((value) => value === "true"),
+    DOMAIN: z.string().default("127.0.0.1"),
   },
   client: {
-    PUBLIC_BACKEND_URL: z.string().url().optional(), //optional for now, but maybe it should be required?
+    NEXT_PUBLIC_BACKEND_URL: z.string().url().default("http://127.0.0.1:1337")
   },
   runtimeEnv: process.env,
 })

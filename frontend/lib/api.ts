@@ -7,9 +7,7 @@ import qs from "qs"
  * @returns {string} Full Strapi URL
  */
 export function getStrapiUrl(path = "") {
-  return `${
-    env.PUBLIC_BACKEND_URL
-  }${path}`
+  return `${env.NEXT_PUBLIC_BACKEND_URL}${path}`
 }
 
 /**
@@ -30,15 +28,12 @@ export async function fetchApi(path: string, urlParamsObject = {}, options = {})
 
   // Build request URL
   const queryString = qs.stringify(urlParamsObject)
-  const requestUrl = `${getStrapiUrl(
-    `/api${path}${queryString ? `?${queryString}` : ""}`
-  )}`
+  const requestUrl = `${getStrapiUrl(`/api${path}${queryString ? `?${queryString}` : ""}`)}`
 
   // Trigger API call
-  const response = await fetch(requestUrl, mergedOptions)
-    .catch((error) => {
-      console.error(error)
-    })
+  const response = await fetch(requestUrl, mergedOptions).catch((error) => {
+    console.error(error)
+  })
 
   // Handle response
   if (response && !response.ok) {

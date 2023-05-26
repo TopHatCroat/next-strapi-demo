@@ -1,6 +1,5 @@
 import { getStrapiUrl } from "lib/api"
 
-export function getStrapiMedia(media: { data: { attributes: { url: string } } }) {
-  const { url } = media.data.attributes
+export function getStrapiMedia(url: string) {
   return url.startsWith("/") ? getStrapiUrl(url) : url
 }
