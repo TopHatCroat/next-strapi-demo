@@ -14,16 +14,13 @@ const queryClient = new QueryClient({
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   return (
     <>
       <Head>
         <title>NextJS + Strapi Demo </title>
       </Head>
       <QueryClientProvider client={queryClient}>
-
         <Component {...pageProps} />
-
       </QueryClientProvider>
     </>
   )
@@ -44,10 +41,10 @@ MyApp.getInitialProps = async (ctx: AppContext) => {
         { label: "Home", href: "/" },
         { label: "Profiles", href: "/profiles" },
         { label: "FAQ", href: "/faq" },
-      ]
-    }
+        { label: "Articles", href: "/articles" },
+      ],
+    },
   }
 }
-
 
 export default MyApp

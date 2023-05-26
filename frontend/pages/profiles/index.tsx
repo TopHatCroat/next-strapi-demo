@@ -63,7 +63,7 @@ export default function Profiles({ pages }: GlobalPageProps) {
           </Pill>
         ))}
       </section>
-      <section className="mx-auto max-w-screen-lg bg-white dark:bg-gray-900">
+      <section className="mx-auto max-w-screen-lg bg-white">
         <div className="flex flex-row flex-wrap justify-center gap-6 px-4 py-8 text-center">
           {profiles.map((profile) => (
             <Profile key={profile.id} {...profile} />

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "PUBLIC_BACKEND_URL=http://localhost:1337 FORCE_COLOR=1 next dev",
+    "dev": "FORCE_COLOR=1 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
