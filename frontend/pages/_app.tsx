@@ -1,8 +1,8 @@
 import "../styles/tailwind.css"
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import type { AppContext, AppProps } from "next/app"
-import Head from "next/head"
 import App from "next/app"
+import Head from "next/head"
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,46 +1,10 @@
 import React from "react"
-import Layout from "components/Layout/Layout"
-import { fetchApi } from "lib/api"
-import GlobalPageProps from "pages/GlobalPageProps"
 import Card from "components/Card/Card"
 import Image from "components/Image/Image"
-
-interface ArticleDto {
-  id: string
-  attributes: {
-    title: string
-    description: string
-    content: string
-    slug: string
-    createdAt: Date
-    updatedAt: Date
-    publishedAt: Date
-    category: unknown
-    image: {
-      data: {
-        id: string
-        attributes: {
-          name: string
-          alternativeText: string
-          caption: string
-          width: number
-          height: number
-          formats: unknown
-          hash: string
-          ext: string
-          mime: string
-          size: number
-          url: string
-          previewUrl: null
-          provider: string
-          provider_metadata: string
-          createdAt: Date
-          updatedAt: Date
-        }
-      }
-    }
-  }
-}
+import Layout from "components/Layout/Layout"
+import { fetchApi } from "lib/api"
+import { ArticleDto } from "lib/types"
+import GlobalPageProps from "pages/GlobalPageProps"
 
 interface ArticlesProps extends GlobalPageProps {
   articles: ArticleDto[]
@@ -58,6 +22,7 @@ export default function Articles({ pages, articles }: ArticlesProps) {
               attributes: {
                 title,
                 description,
+                slug,
                 image: {
                   data: {
                     attributes: { url, width, height, alternativeText },
@@ -68,7 +33,7 @@ export default function Articles({ pages, articles }: ArticlesProps) {
               <Card
                 className="w-full"
                 key={id}
-                href="#"
+                href={`/article/${slug}`}
                 header={title}
                 content={description}
                 image={url ? <Image src={url} width={width} height={height} alt={alternativeText} /> : undefined}
