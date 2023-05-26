@@ -43,7 +43,7 @@ export interface ArticleDto {
 interface AuthorDto {
   id: string
   attributes: {
-    name: "Sarah Baker"
+    name: string
     email: string
     picture: {
       data: ImageDto

@@ -66,7 +66,7 @@ export default function Profiles({ pages }: GlobalPageProps) {
       <section className="mx-auto max-w-screen-lg bg-white">
         <div className="flex flex-row flex-wrap justify-center gap-6 px-4 py-8 text-center">
           {profiles.map((profile) => (
-            <Profile key={profile.id} {...profile} />
+            <Profile imgSrc="/img/avatar.png" key={profile.id} {...profile} />
           ))}
         </div>
       </section>

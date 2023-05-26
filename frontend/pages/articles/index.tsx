@@ -5,6 +5,7 @@ import Layout from "components/Layout/Layout"
 import { fetchApi } from "lib/api"
 import { ArticleDto } from "lib/types"
 import GlobalPageProps from "pages/GlobalPageProps"
+import { getStrapiMedia } from "lib/media"
 
 interface ArticlesProps extends GlobalPageProps {
   articles: ArticleDto[]
@@ -36,7 +37,11 @@ export default function Articles({ pages, articles }: ArticlesProps) {
                 href={`/article/${slug}`}
                 header={title}
                 content={description}
-                image={url ? <Image src={url} width={width} height={height} alt={alternativeText} /> : undefined}
+                image={
+                  url ? (
+                    <Image src={getStrapiMedia(url)} width={width} height={height} alt={alternativeText} />
+                  ) : undefined
+                }
               />
             )
           )}

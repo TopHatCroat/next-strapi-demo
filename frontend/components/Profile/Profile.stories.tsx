@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react"
 import { Profile } from "./Profile"
+import avatar from "../../public/img/avatar.png"
 
 const meta: Meta<typeof Profile> = {
   title: "Profile",
@@ -9,6 +10,8 @@ const meta: Meta<typeof Profile> = {
     name: "John Doe",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     active: true,
+    imgSrc: avatar.src,
+    small: false,
   },
   argTypes: {
     id: {
@@ -21,6 +24,9 @@ const meta: Meta<typeof Profile> = {
       control: { type: "text" },
     },
     active: {
+      control: { type: "boolean" },
+    },
+    small: {
       control: { type: "boolean" },
     },
   },
