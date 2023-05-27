@@ -3,17 +3,20 @@ import ReactMarkdown from "react-markdown"
 import rehypeRaw from "rehype-raw"
 import Image from "components/Image/Image"
 import Layout from "components/Layout/Layout"
+import { Profile } from "components/Profile/Profile"
 import { fetchApi } from "lib/api"
+import GlobalPageProps from "lib/GlobalPageProps"
 import { getStrapiMedia } from "lib/media"
 import { ArticleDto } from "lib/types"
-import GlobalPageProps from "pages/GlobalPageProps"
-import { Profile } from "components/Profile/Profile"
 
 interface ArticleProps extends GlobalPageProps {
   article: ArticleDto
 }
 
 export default function Article({ article, pages }: ArticleProps) {
+  console.log("article prop", article)
+  if (!Boolean(article)) return <div>404</div>
+
   const {
     title,
     description,
@@ -64,15 +67,20 @@ export default function Article({ article, pages }: ArticleProps) {
 }
 
 export async function getStaticPaths() {
-  const articlesRes = (await fetchApi("/articles", { fields: ["slug"] })) as { data: ArticleDto[] }
+  const articlesRes = (await fetchApi("/articles", { fields: ["slug"] })) as { data: ArticleDto[] | null }
+
+  console.log("article res: ", articlesRes)
+  if (articlesRes === null) return { paths: [], fallback: true }
+
+  const paths = (articlesRes as { data: ArticleDto[] }).data.map((article) => ({
+    params: {
+      slug: article.attributes.slug,
+    },
+  }))
 
   return {
-    paths: articlesRes.data.map((article) => ({
-      params: {
-        slug: article.attributes.slug,
-      },
-    })),
-    fallback: false,
+    paths,
+    fallback: true,
   }
 }
 
@@ -82,10 +90,12 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
       slug: params.slug,
     },
     populate: ["image", "category", "author.picture"],
-  })) as { data: ArticleDto[] }
+  })) as { data: ArticleDto[] | null }
+
+  if (articlesRes === null) return { props: { article: null }, revalidate: 60 }
 
   return {
-    props: { article: articlesRes.data[0] },
-    revalidate: 1,
+    props: { article: (articlesRes as { data: ArticleDto[] }).data[0] },
+    revalidate: 60,
   }
 }

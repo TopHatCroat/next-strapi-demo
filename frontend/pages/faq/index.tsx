@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { Accordion } from "components/Accordion/Accordion"
 import Layout from "components/Layout/Layout"
-import GlobalPageProps from "pages/GlobalPageProps"
+import GlobalPageProps from "lib/GlobalPageProps"
 
 interface FaqDto {
   question: string

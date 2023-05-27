@@ -3,9 +3,9 @@ import Card from "components/Card/Card"
 import Image from "components/Image/Image"
 import Layout from "components/Layout/Layout"
 import { fetchApi } from "lib/api"
-import { ArticleDto } from "lib/types"
-import GlobalPageProps from "pages/GlobalPageProps"
+import GlobalPageProps from "lib/GlobalPageProps"
 import { getStrapiMedia } from "lib/media"
+import { ArticleDto } from "lib/types"
 
 interface ArticlesProps extends GlobalPageProps {
   articles: ArticleDto[]
@@ -53,21 +53,16 @@ export default function Articles({ pages, articles }: ArticlesProps) {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [articlesRes] = await Promise.all([
-    fetchApi("/articles", { populate: ["image", "category"] }) as Promise<{ data: ArticleDto[] }>,
-    fetchApi("/categories", { populate: "*" }),
-    fetchApi("/homepage", {
-      populate: {
-        hero: "*",
-        seo: { populate: "*" },
-      },
-    }),
-  ])
+  const articlesRes = (await fetchApi("/articles", { populate: ["image", "category"] })) as {
+    data: ArticleDto[] | null
+  }
+
+  if (articlesRes === null) return { props: { articles: [] }, revalidate: 60 }
 
   return {
     props: {
-      articles: articlesRes.data,
+      articles: (articlesRes as { data: ArticleDto[] }).data,
     },
-    revalidate: 1,
+    revalidate: 60,
   }
 }

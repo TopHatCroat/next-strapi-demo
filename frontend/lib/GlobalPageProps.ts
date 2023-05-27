@@ -4,4 +4,4 @@ type GlobalPageProps = {
   pages: NavbarItem[]
 }
 
-export default GlobalPageProps;
+export default GlobalPageProps

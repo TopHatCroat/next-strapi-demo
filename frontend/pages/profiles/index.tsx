@@ -2,7 +2,7 @@ import { useState } from "react"
 import Layout from "components/Layout/Layout"
 import { Pill } from "components/Pill/Pill"
 import { Profile } from "components/Profile/Profile"
-import GlobalPageProps from "pages/GlobalPageProps"
+import GlobalPageProps from "lib/GlobalPageProps"
 
 interface ProfileDto {
   id: string

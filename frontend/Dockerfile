@@ -3,17 +3,15 @@ FROM node:18
 ARG NODE_ENV=development
 ENV NODE_ENV=${NODE_ENV}
 
+ARG DOMAIN=localhost
+ENV DOMAIN=${DOMAIN}
+
+ARG BACKEND_URL=http://localhost:1337
+ENV BACKEND_URL=${BACKEND_URL}
+
 WORKDIR /opt/
-
-# Install packages first to speed up build in the future (unless these change Docker will cache it)
-COPY ./package.json ./yarn.lock ./
-ENV PATH /opt/node_modules/.bin:$PATH
-RUN yarn install
-
-# Then copy everything else into a child dir to ensure chache works
-# this will work because of new path we set above
-WORKDIR /opt/app
 COPY ./ .
+RUN yarn install
 RUN yarn build
 EXPOSE 3000
 

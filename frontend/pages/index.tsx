@@ -2,7 +2,7 @@ import { LP_GRID_ITEMS } from "lp-items"
 import { AboutUs } from "components/AboutUs/AboutUs"
 import { Button } from "components/Button/Button"
 import Layout from "components/Layout/Layout"
-import GlobalPageProps from "pages/GlobalPageProps"
+import GlobalPageProps from "lib/GlobalPageProps"
 
 export default function Index({ pages }: GlobalPageProps) {
   return (
