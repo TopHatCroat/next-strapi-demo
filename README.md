@@ -39,6 +39,14 @@ pre-commit install -t commit-msg
 
 // TODO
 
+## 🤖 ChatGPT Code Review
+
+We've integrated the innovative [ChatGPT Code Review](https://github.com/anc95/ChatGPT-CodeReview) for AI-powered,
+automated code reviews. This feature provides real-time feedback on your code, helping improve code quality and catch
+potential issues.
+
+![image](https://user-images.githubusercontent.com/28964599/233685071-e1371edf-6359-41c3-a989-335d6ee09cb7.png)
+
 ## Contributing
 
 Contributions are always welcome! To contribute, please follow these steps:
