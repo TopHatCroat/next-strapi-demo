@@ -15,6 +15,7 @@
     "test-storybook": "FORCE_COLOR=1 test-storybook",
     "build-storybook": "FORCE_COLOR=1 storybook build",
     "test": "FORCE_COLOR=1 jest --passWithNoTests",
+    "test:smoke": "yarn build-storybook --quiet && npx concurrently -k -s first -n \"SB,TEST\" -c \"magenta,blue\" \"npx http-server storybook-static --port 6006 --silent\" \"npx wait-on tcp:127.0.0.1:6006 && yarn test-storybook\"",
     "e2e:headless": "playwright test",
     "e2e:ui": "playwright test --ui",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
