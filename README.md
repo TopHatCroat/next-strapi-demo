@@ -20,7 +20,7 @@ yarn install
 3. Run the development servers for both the frontend and backend
 
 ```bash
-yarn dev
+turbo dev
 ```
 
 4. Access the UIs: 
