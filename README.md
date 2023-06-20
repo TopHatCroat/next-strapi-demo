@@ -35,6 +35,13 @@ brew install pre-commit
 pre-commit install -t commit-msg
 ```
 
+## 📜 API Documentation
+
+API documentation is provided by [Strapi Documentation](https://github.com/strapi/strapi/tree/main/packages/plugins/documentation) plugin.
+The full documentation is available in `apps/backend/src/extensions/documentation/documentation/0.1.0/full_documentation.json`.
+It will be regenerated automatically on each server restart.
+
+
 ## 🚀 Deployment
 
 // TODO
