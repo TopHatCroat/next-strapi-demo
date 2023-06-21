@@ -21,7 +21,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "postinstall": "npx patch-package -y",
     "preinstall": "npx only-allow yarn",
-    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx .. --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg"
+    "coupling-graph": "npx madge --extensions js,jsx,ts,tsx,css,md,mdx .. --exclude '.next|tailwind.config.js|reset.d.ts|prettier.config.js|postcss.config.js|playwright.config.ts|next.config.js|next-env.d.ts|instrumentation.ts|e2e/|README.md|.storybook/|.eslintrc.js' --image graph.svg",
+    "generate:rest-api": "openapi-generator-cli generate -g typescript-axios -o api --additional-properties=useSingleRequestParameter=true -i ../backend/src/extensions/documentation/documentation/0.1.0/full_documentation.json"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^13.3.0",
@@ -68,6 +69,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@jest/globals": "^29.5.0",
+    "@openapitools/openapi-generator-cli": "^2.6.0",
     "@opentelemetry/api": "^1.4.1",
     "@playwright/test": "^1.32.3",
     "@storybook/addon-essentials": "^7.0.5",

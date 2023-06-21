@@ -18,9 +18,9 @@ export default ({ env }) => ({
         title: 'Strapi CMS Demo',
         description: 'Strapi CMS Demo API Documentation',
         contact: {
-          name: 'TEAM',
-          email: 'contact-email@something.io',
-          url: 'mywebsite.io'
+          name: 'Antonio Martinović',
+          email: 'martinovic.antonio@gmail.com',
+          url: 'https://github.com/TopHatCroat/next-strapi-demo'
         },
         license: {
           name: 'MIT',
