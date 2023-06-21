@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
 import type { AppContext, AppProps } from "next/app"
 import App from "next/app"
 import Head from "next/head"
+import { Configuration } from "../api"
 
 const queryClient = new QueryClient({
   defaultOptions: {

@@ -1,5 +1,17 @@
-import { env } from "env.mjs"
 import qs from "qs"
+import { env } from "env.mjs"
+import { Configuration } from "../api"
+
+/**
+ * Get full Strapi URL from path
+ * @param {string} path Path of the URL
+ * @returns {string} Full Strapi URL
+ */
+export function getApiConfiguration(): Configuration {
+  return new Configuration({
+    basePath: getStrapiUrl() + "/api",
+  })
+}
 
 /**
  * Get full Strapi URL from path

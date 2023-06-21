@@ -41,6 +41,16 @@ API documentation is provided by [Strapi Documentation](https://github.com/strap
 The full documentation is available in `apps/backend/src/extensions/documentation/documentation/0.1.0/full_documentation.json`.
 It will be regenerated automatically on each server restart.
 
+### 🚘 Auto-generated REST API
+
+> ⚠️ **Warning**: Due to a bug in Strapi Documentation plugin, you will need to delete `upload?id={id}` path from `apps/backend/src/extensions/documentation/documentation/0.1.0/full_documentation.json`. Otherwise, the generation will fail.
+
+If you changed or added new content types, you can regenerate the REST API documentation by running the following command:
+
+```sh
+turbo generate:rest-api
+```
+
 
 ## 🚀 Deployment
 

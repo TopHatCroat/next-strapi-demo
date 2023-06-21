@@ -1,8 +1,9 @@
 import React from "react"
+import { ArticleApi } from "api"
 import Card from "components/Card/Card"
 import Image from "components/Image/Image"
 import Layout from "components/Layout/Layout"
-import { fetchApi } from "lib/api"
+import { getApiConfiguration } from "lib/api"
 import GlobalPageProps from "lib/GlobalPageProps"
 import { getStrapiMedia } from "lib/media"
 import { ArticleDto } from "lib/types"
@@ -52,16 +53,12 @@ export default function Articles({ pages, articles }: ArticlesProps) {
 }
 
 export async function getStaticProps() {
-  // Run API calls in parallel
-  const articlesRes = (await fetchApi("/articles", { populate: ["image", "category"] })) as {
-    data: ArticleDto[] | null
-  }
-
-  if (articlesRes === null) return { props: { articles: [] }, revalidate: 60 }
+  const articleApi = new ArticleApi(getApiConfiguration())
+  const articles = await articleApi.getArticles({ populate: "image,category" });
 
   return {
     props: {
-      articles: (articlesRes as { data: ArticleDto[] }).data,
+      articles: articles.data?.data || []
     },
     revalidate: 60,
   }
